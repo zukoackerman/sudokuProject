@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- csslink -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="root.css" />
+  <!-- for icon -->
+  <script src="https://kit.fontawesome.com/b9864528d4.js" crossorigin="anonymous"></script>
+  <!-- favicon    -->
+  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon" />
+  <!-- jquery -->
+  <script src="jquery3.6.0.js"></script>
+
+  <title>Sudoku</title>
+</head>
+
+<body>
+  <!-- <a class="play" href="./intro.html">Back</a> -->
+
+
+  <div class="display">
+
+    <div id="heart"></div>
+
+    <div class="timer_container">
+      <div class="pause_icon">
+        <i class="fa-solid fa-play"></i>
+        <i class="fa-solid fa-pause" style="color: #000000;"></i>
+      </div>
+      <div id="timer"></div>
+    </div>
+  </div>
+  <!-- start sudoku board -->
+  <div class="grid" id="grid">
+    <div class="cover"><span>Game is paused !!!</span></div>
+    <div class="b1">
+      <div class="r1 c1"></div>
+      <div class="r1 c2"></div>
+      <div class="r1 c3"></div>
+      <div class="r2 c1"></div>
+      <div class="r2 c2"></div>
+      <div class="r2 c3"></div>
+      <div class="r3 c1"></div>
+      <div class="r3 c2"></div>
+      <div class="r3 c3"></div>
+    </div>
+    <div class="b2">
+      <div class="r1 c4"></div>
+      <div class="r1 c5"></div>
+      <div class="r1 c6"></div>
+      <div class="r2 c4"></div>
+      <div class="r2 c5"></div>
+      <div class="r2 c6"></div>
+      <div class="r3 c4"></div>
+      <div class="r3 c5"></div>
+      <div class="r3 c6"></div>
+    </div>
+    <div class="b3">
+      <div class="r1 c7"></div>
+      <div class="r1 c8"></div>
+      <div class="r1 c9"></div>
+      <div class="r2 c7"></div>
+      <div class="r2 c8"></div>
+      <div class="r2 c9"></div>
+      <div class="r3 c7"></div>
+      <div class="r3 c8"></div>
+      <div class="r3 c9"></div>
+    </div>
+    <div class="b4">
+      <div class="r4 c1"></div>
+      <div class="r4 c2"></div>
+      <div class="r4 c3"></div>
+      <div class="r5 c1"></div>
+      <div class="r5 c2"></div>
+      <div class="r5 c3"></div>
+      <div class="r6 c1"></div>
+      <div class="r6 c2"></div>
+      <div class="r6 c3"></div>
+    </div>
+    <div class="b5">
+      <div class="r4 c4"></div>
+      <div class="r4 c5"></div>
+      <div class="r4 c6"></div>
+      <div class="r5 c4"></div>
+      <div class="r5 c5"></div>
+      <div class="r5 c6"></div>
+      <div class="r6 c4"></div>
+      <div class="r6 c5"></div>
+      <div class="r6 c6"></div>
+    </div>
+    <div class="b6">
+      <div class="r4 c7"></div>
+      <div class="r4 c8"></div>
+      <div class="r4 c9"></div>
+      <div class="r5 c7"></div>
+      <div class="r5 c8"></div>
+      <div class="r5 c9"></div>
+      <div class="r6 c7"></div>
+      <div class="r6 c8"></div>
+      <div class="r6 c9"></div>
+    </div>
+    <div class="b7">
+      <div class="r7 c1"></div>
+      <div class="r7 c2"></div>
+      <div class="r7 c3"></div>
+      <div class="r8 c1"></div>
+      <div class="r8 c2"></div>
+      <div class="r8 c3"></div>
+      <div class="r9 c1"></div>
+      <div class="r9 c2"></div>
+      <div class="r9 c3"></div>
+    </div>
+    <div class="b8">
+      <div class="r7 c4"></div>
+      <div class="r7 c5"></div>
+      <div class="r7 c6"></div>
+      <div class="r8 c4"></div>
+      <div class="r8 c5"></div>
+      <div class="r8 c6"></div>
+      <div class="r9 c4"></div>
+      <div class="r9 c5"></div>
+      <div class="r9 c6"></div>
+    </div>
+    <div class="b9">
+      <div class="r7 c7"></div>
+      <div class="r7 c8"></div>
+      <div class="r7 c9"></div>
+      <div class="r8 c7"></div>
+      <div class="r8 c8"></div>
+      <div class="r8 c9"></div>
+      <div class="r9 c7"></div>
+      <div class="r9 c8"></div>
+      <div class="r9 c9"></div>
+    </div>
+  </div>
+  <!-- end sudoku board -->
+
+  <div class="side">
+    <!-- star tools -->
+    <div class="tools">
+      <button class="eraser">
+        <i class="fa-solid fa-eraser"></i>
+      </button>
+      <button class="note">
+        <i class="fa-solid fa-pencil"></i>
+      </button>
+    </div>
+    <!-- end tools -->
+    <!-- start numpad -->
+    <div class="numPad">
+      <button><span>1</span></button>
+      <button><span>2</span></button>
+      <button><span>3</span></button>
+      <button><span>4</span></button>
+      <button><span>5</span></button>
+      <button><span>6</span></button>
+      <button><span>7</span></button>
+      <button><span>8</span></button>
+      <button><span>9</span></button>
+    </div>
+    <!-- end numpad -->
+    <!-- new game button -->
+    <a class="newGame" href="./intro.html">New Game</a>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <p>Better luck next time! Click 'New Game' to try again.</p>
+      <a class="newGame" href="./intro.html">New Game</a>
+    </div>
+
+  </div>
+
+
+  <script type="module" src="./selected,remove,3note ,OK.js"></script>
+</body>
+
+</html>

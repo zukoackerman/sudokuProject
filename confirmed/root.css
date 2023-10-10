@@ -1,0 +1,21 @@
+:root {
+  --background:#fff1a5;
+  --smallRow: #ba8c63;
+  --largeRow: black;
+  --shadow: rgba(0, 0, 0, 0.7);
+  --piece: linear-gradient(
+    45deg,
+    rgb(227, 188, 116),
+    rgb(233, 186, 101),
+    rgb(226, 174, 76),
+    rgb(206, 152, 53)
+  );
+  --text: black;
+  --light: wheat;
+  --amethyst: #a663cc;
+  --wisteria: #b298dc;
+  /* --light-card: url('86.jpg');
+  --dark-card: url('dark_small_5.jpg'); */
+  --card: url('./img/light_bg.jpg');
+
+}
