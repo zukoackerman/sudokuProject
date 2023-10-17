@@ -11,6 +11,7 @@ body {
   display: flex;
   flex-direction: row;
   cursor: default;
+ 
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
@@ -322,6 +323,11 @@ input {
 
 .mobileLogo p {
   padding-top: 1rem;
+}
+@media (min-width:600px) {
+  body{
+    padding-left: 50px;
+  }
 }
 @media (max-width: 480px) {
   .logo {

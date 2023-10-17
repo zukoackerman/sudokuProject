@@ -10,6 +10,7 @@
   padding: 0;
   border: none;
   cursor: pointer;
+  user-select: none;
   box-sizing: border-box;
 }
 
